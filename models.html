@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รุ่นมอเตอร์ไซค์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>รุ่นมอเตอร์ไซค์</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="models.html">รุ่นมอเตอร์ไซค์</a></li>
+                <li><a href="contact.html">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>รายการมอเตอร์ไซค์ยอดนิยม</h2>
+
+        <div class="bike">
+            <img src="330e96b458011c6c5469d400dc2e4390.jpg" alt="Honda CBR 500R">
+            <h3>Honda CBR 500R</h3>
+            <p>สปอร์ตไบค์ที่ขับขี่ง่ายและทรงพลัง เหมาะสำหรับทั้งมือใหม่และมืออาชีพ</p>
+            <a href="javascript:void(0)" class="details-button" onclick="showDetails('•เครื่องยนต์ : 2 สูบเรียง DOHC 4 จังหวะ 4 วาล์วต่อสูบ ระบายความร้อนด้วยน้ำ •ขนาด : 471 ซีซี •แรงม้า : 49.6 แรงม้า ที่ 8,500 รอบ/นาที •สไตล์รถ : สปอร์ต •ความสูงเบาะนั่ง : 789 มิลลิเมตร •น้ำหนักรถ : 195 กิโลกรัม')">ดูรายละเอียด</a>
+        </div>
+
+        <div class="bike">
+            <img src="12.png" alt="Yamaha R15">
+            <h3>Yamaha R15</h3>
+            <p>รถมอเตอร์ไซค์สไตล์สปอร์ตที่มาพร้อมกับเครื่องยนต์ 155cc</p>
+            <a href="javascript:void(0)" class="details-button" onclick="showDetails('•เครื่องยนต์ : 1 สูบ SOHC 4 วาล์วพร้อมระบบวาล์วแบบ VVA 4 จังหวะ ระบบระบายความร้อนด้วยน้ำ •ขนาด : 155.09 ซีซี •แรงม้า  19 แรงม้า ที่ 10,000 รอบ/นาที •สไตล์รถ : Sport •ความสูงเบาะนั่ง : 815 มิลลิเมตร •น้ำหนักรถ : 137 กิโลกรัม')">ดูรายละเอียด</a>
+        </div>
+
+        <div class="bike">
+            <img src="ninja400-gy2-01.jpg" alt="Kawasaki Ninja 400">
+            <h3>Kawasaki Ninja 400</h3>
+            <p>เครื่องยนต์แรงบิดดี ขับขี่ง่าย เหมาะสำหรับการเดินทางระยะไกล</p>
+            <a href="javascript:void(0)" class="details-button" onclick="showDetails('•เครื่องยนต์ : 4 จังหวะ 2 สูบเรียง ระบายความร้อนด้วยน้ำ DOHC 4 วาล์วต่อลูกสูบ •ขนาด : 399 ซีซี •แรงม้า : 45 แรงม้า ที่ 10,000 รอบ/นาที •สไตล์รถ : Sport •ความสูงเบาะนั่ง : 785 มิลลิเมตร •น้ำหนักรถ : 168 กิโลกรัม')">ดูรายละเอียด</a>
+        </div>
+
+        <div class="bike">
+            <img src="413d60f4f79f47308b9a79c245a089fd.jpg" alt="Ducati Panigale V4">
+            <h3>Ducati Panigale V4</h3>
+            <p>สุดยอดรถสปอร์ตจาก Ducati มาพร้อมเครื่องยนต์ V4 ที่แรงสุดขั้ว</p>
+            <a href="javascript:void(0)" class="details-button" onclick="showDetails('•เครื่องยนต์ : Desmosedici Stradale V4 90 องศา 4 จังหวะ DOHC 16 วาล์ว ระบายความร้อนด้วยน้ำ •ขนาด : 1,103 ซีซี •แรงม้า : 214 แรงม้า ที่ 13,000 รอบ/นาที •โหมดการขับขี่ : Street , Sport , Race ปรับตั้งค่าได้ในแต่ละโหมด •สไตล์รถ : Sport •ความสูงเบาะนั่ง : 830 มิลลิเมตร •น้ำหนักรถ : 195 กิโลกรัม')">ดูรายละเอียด</a>
+        </div>
+    </section>
+
+    <!-- แสดงรายละเอียดเพิ่มเติม -->
+    <div id="detail-view" class="detail-view" style="display:none;">
+        <div class="detail-content">
+            <h4>รายละเอียดเพิ่มเติม:</h4>
+            <p id="detail-desc"></p>
+            <button onclick="closeDetails()">ปิดรายละเอียด</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 เว็บไซต์มอเตอร์ไซค์</p>
+    </footer>
+
+    <script>
+        function showDetails(description) {
+            document.getElementById('detail-desc').innerText = description; // แสดงข้อความที่ส่งมา
+            document.getElementById('detail-view').style.display = 'flex'; // แสดงส่วนที่มีรายละเอียด
+        }
+
+        function closeDetails() {
+            document.getElementById('detail-view').style.display = 'none'; // ซ่อนรายละเอียด
+        }
+    </script>
+</body>
+
+</html>
